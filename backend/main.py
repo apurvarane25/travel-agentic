@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
 from agent import get_travel_recommendation
+from models import TravelRequest
 
 # Initialize FastAPI app
 app = FastAPI()
@@ -15,11 +16,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Define request model (what React will send)
-class TravelRequest(BaseModel):
-    city: str
-    start_date: str
-    end_date: str
+# # Define request model (what React will send)
+# class TravelRequest(BaseModel):
+#     city: str
+#     start_date: str
+#     end_date: str
 
 # Define response model (what we'll send back)
 class TravelResponse(BaseModel):

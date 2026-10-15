@@ -1,3 +1,5 @@
+from datetime import date
+
 from dotenv import load_dotenv
 from tools import get_weather, get_attractions
 from langchain.agents import create_agent
@@ -9,7 +11,7 @@ load_dotenv()
 
 # Your tool functions here (get_coordinates, get_weather, get_attractions)
 
-def get_travel_recommendation(city: str, start_date: str, end_date: str) -> str:
+def get_travel_recommendation(city: str, start_date: date, end_date: date) -> str:
     """Get travel recommendation from agent"""
     try:
         # Create agent
@@ -27,15 +29,7 @@ def get_travel_recommendation(city: str, start_date: str, end_date: str) -> str:
             }]
         })
         
-        # Extract text and return as string
-        response_text = result["messages"][-1].content
-        
-        # If it's a string, return it
-        if isinstance(response_text, str):
-            return response_text
-        
-        # If it's something else (list, dict, etc), convert to string
-        return str(response_text)
+        return result["messages"][-1].text
     
     except Exception as e:
         return f"Error: {str(e)}"
