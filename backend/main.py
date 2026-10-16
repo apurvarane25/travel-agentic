@@ -6,7 +6,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from agent import plan_trip
 from models import TravelPlan, TravelRequest
-from tools import CityNotFound, get_coordinates
+from tools import CityNotFound, resolve_place
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -29,9 +29,9 @@ def health():
 
 @app.post("/api/travel-plan", response_model=TravelPlan)
 def get_travel_plan(request: TravelRequest) -> TravelPlan:
-    # Reject unknown cities before spending a model call.
+    # Resolve the city once, before any model call. Both tools then use this exact place.
     try:
-        get_coordinates(request.city)
+        place = resolve_place(request.city)
     except CityNotFound:
         raise HTTPException(
             status_code=422,
@@ -43,11 +43,11 @@ def get_travel_plan(request: TravelRequest) -> TravelPlan:
             }],
         )
     except requests.RequestException:
-        # Geocoder is down: carry on; the weather section will report the failure.
-        logger.warning("Geocoding check failed for %s", request.city, exc_info=True)
+        logger.warning("Geocoding failed for %s", request.city, exc_info=True)
+        raise HTTPException(status_code=503, detail="The location service is unavailable. Please try again.")
 
     try:
-        return plan_trip(request)
+        return plan_trip(request, place)
     except Exception:
         logger.exception("Agent run failed")  # full error goes to the server log, not the client
         raise HTTPException(status_code=502, detail="The travel agent failed. Please try again.")
