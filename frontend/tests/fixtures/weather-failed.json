@@ -1,0 +1,24 @@
+{
+    "city": "Lisbon",
+    "location": {
+        "name": "Lisbon",
+        "region": "Lisbon District",
+        "country": "Portugal",
+        "latitude": 38.72509,
+        "longitude": -9.1498
+    },
+    "start_date": "2026-10-20",
+    "end_date": "2026-10-22",
+    "weather": {
+        "status": "error",
+        "days": [],
+        "message": "The weather service is unavailable right now."
+    },
+    "attractions": {
+        "status": "unavailable",
+        "items": [],
+        "source_url": "https://en.wikipedia.org/wiki/Lisbon",
+        "message": "No attractions list found on Wikipedia."
+    },
+    "recommendation": "The weather service is unavailable right now, and no specific attractions list was found on Wikipedia. However, I can still provide a wonderful general itinerary for your trip to Lisbon from October 20 to October 22, 2026!\n\n### **Day 1: Historic Lisbon (Baixa & Alfama)**\n* **Morning:** Start your trip in **Baixa** (Downtown). Walk through the grand **Praça do Comércio** facing the Tagus River, then stroll up the bustling pedestrian street *Rua Augusta*.\n* **Afternoon:** Head into **Alfama**, Lisbon's oldest and most charming district. Wander through its labyrinth of narrow, cobbled streets and visit the imposing **São Jorge Castle** for panoramic views over the city and river. \n* **Evening:** Dine at a traditional tavern while listening to live **Fado music**, Portugal's soulful traditional genre.\n\n### **Day 2: Monumental Belém**\n* **Morning:** Take a tram or train west to the historic district of **Belém**. Visit the magnificent **Jerónimos Monastery**, a stunning masterpiece of Manueline architecture, and view the iconic **Belém Tower** on the riverfront.\n* **Afternoon:** Pay a visit to the **Monument to the Discoveries**. Afterwards, stop by the famous bakery *Pastéis de Belém* to enjoy warm, freshly baked *pastel de nata* (custard tarts).\n* **Evening:** Return to central Lisbon and explore the vibrant nightlife and dining scene in the **Bairro Alto** or **Cais do Sodré** neighborhoods.\n\n### **Day 3: Modern Art & Panoramic Views**\n* **Morning:** Visit the **Calouste Gulbenkian Museum**, home to an incredible collection of ancient and modern art set within tranquil, beautifully landscaped gardens.\n* **Afternoon:** Explore the trendy **Chiado** district for shopping and café culture. Take a ride on the iconic **Santa Justa Lift** or one of Lisbon’s historic yellow trams (*remendo*) for more great viewpoints (*miradouros*), such as *Miradouro de São Pedro de Alcântara*.\n* **Evening:** Enjoy a farewell dinner overlooking the illuminated city and river at a rooftop bar or restaurant. \n\n*(Note: The activities listed above are general suggestions to help you make the most of your stay.)* Have a fantastic trip to Lisbon!"
+}

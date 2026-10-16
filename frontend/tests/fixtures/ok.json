@@ -1,0 +1,43 @@
+{
+    "city": "Lisbon",
+    "location": {
+        "name": "Lisbon",
+        "region": "Lisbon District",
+        "country": "Portugal",
+        "latitude": 38.72509,
+        "longitude": -9.1498
+    },
+    "start_date": "2026-10-20",
+    "end_date": "2026-10-22",
+    "weather": {
+        "status": "ok",
+        "days": [
+            {
+                "day": "2026-10-20",
+                "temp_max_c": 19.9,
+                "temp_min_c": 11.5,
+                "precipitation_mm": 0.0
+            },
+            {
+                "day": "2026-10-21",
+                "temp_max_c": 22.6,
+                "temp_min_c": 10.0,
+                "precipitation_mm": 0.0
+            },
+            {
+                "day": "2026-10-22",
+                "temp_max_c": 21.2,
+                "temp_min_c": 12.1,
+                "precipitation_mm": 0.9
+            }
+        ],
+        "message": null
+    },
+    "attractions": {
+        "status": "unavailable",
+        "items": [],
+        "source_url": "https://en.wikipedia.org/wiki/Lisbon",
+        "message": "No attractions list found on Wikipedia."
+    },
+    "recommendation": "Here is your travel plan for Lisbon from October 20 to October 22, 2026.\n\n### Weather Forecast\n* **October 20, 2026:** High of 19.9°C, Low of 11.5°C, with 0.0 mm of rain.\n* **October 21, 2026:** High of 22.6°C, Low of 10.0°C, with 0.0 mm of rain.\n* **October 22, 2026:** High of 21.2°C, Low of 12.1°C, with 0.9 mm of rain.\n\n*(Note: The Wikipedia attractions lookup returned no data, so the following daily suggestions are general recommendations based on popular sights in Lisbon.)*\n\n---\n\n### Daily Itinerary\n\n#### Day 1: October 20, 2026 (Clear & Mild)\n* **Morning:** Start your trip in the historic **Baixa** (downtown) district and walk through the grand **Praça do Comércio** opening up to the Tagus River.\n* **Afternoon:** Head up to the hilltop **Alfama** district, Lisbon's oldest neighborhood. Wander the winding medieval streets and visit the imposing **São Jorge Castle** for panoramic views over the city.\n* **Evening:** Enjoy dinner in Alfama while listening to live traditional *Fado* music.\n\n#### Day 2: October 21, 2026 (Warmer & Sunny)\n* **Morning:** Take a tram or train out to **Belém** to see the UNESCO World Heritage sites: the iconic **Belém Tower** and the stunning **Jerónimos Monastery**. Don't forget to stop by *Pastéis de Belém* for a traditional custard tart!\n* **Afternoon:** Walk along the riverfront to the **Monument to the Discoveries**, then head toward central Lisbon to explore the upscale shops and squares of **Chiado** and **Bairro Alto**.\n* **Evening:** Watch the sunset from one of Lisbon's famous viewpoints (miradouros), such as *Miradouro de Santa Catarina*, taking advantage of the warm evening high of 22.6°C.\n\n#### Day 3: October 22, 2026 (Mild with Slight Chance of Rain)\n* **Morning:** With a light chance of rain (0.9 mm), it's a great morning to head indoors and explore the ocean depths at the **Oceanário de Lisboa**, located in the modern Parque das Nações district.\n* **Afternoon:** Wander around the Parque das Nações waterfront area or visit the **Calouste Gulbenkian Museum** to enjoy its incredible art collection and peaceful garden grounds.\n* **Evening:** Conclude your trip with a cozy dinner in one of Lisbon's historic neighborhoods, sampling local Portuguese seafood and wine."
+}

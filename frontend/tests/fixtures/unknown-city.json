@@ -1,0 +1,13 @@
+{
+    "detail": [
+        {
+            "type": "city_not_found",
+            "loc": [
+                "body",
+                "city"
+            ],
+            "msg": "Couldn't find a city called 'Xyzzyqqplorf'",
+            "input": "Xyzzyqqplorf"
+        }
+    ]
+}

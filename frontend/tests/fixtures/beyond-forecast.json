@@ -1,0 +1,24 @@
+{
+    "city": "Lisbon",
+    "location": {
+        "name": "Lisbon",
+        "region": "Lisbon District",
+        "country": "Portugal",
+        "latitude": 38.72509,
+        "longitude": -9.1498
+    },
+    "start_date": "2026-11-14",
+    "end_date": "2026-11-14",
+    "weather": {
+        "status": "unavailable",
+        "days": [],
+        "message": "Forecasts are only available up to 2026-10-29."
+    },
+    "attractions": {
+        "status": "unavailable",
+        "items": [],
+        "source_url": "https://en.wikipedia.org/wiki/Lisbon",
+        "message": "No attractions list found on Wikipedia."
+    },
+    "recommendation": "No forecast is available yet for these dates. Forecasts are only available up to 2026-10-29.\n\nNo attractions list found on Wikipedia.\n\nSince there is no weather forecast or Wikipedia attraction list available for Lisbon for your dates, here is a general suggestion for a day trip to Lisbon on November 14, 2026:\n\n**Day 1 (November 14, 2026): Exploring Lisbon**\n* **Morning:** Head to the historic **Baixa** and **Chiado** districts. Grab a traditional *pastel de nata* (custard tart) in the morning, and walk through the grand Praca do Comercio opening onto the Tagus River.\n* **Afternoon:** Explore the charming, maze-like alleys of the **Alfama** district. Visit the imposing **St. George's Castle (Castelo de São Jorge)** for panoramic views over the city's red rooftops and the river.\n* **Evening:** Take a historic yellow tram (like Tram 28) or head down to the waterfront at **Cais do Sodré** or **Bica** for dinner, where you can enjoy traditional Portuguese seafood and Fado music in a cozy tavern."
+}
