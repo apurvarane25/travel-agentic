@@ -1,11 +1,11 @@
 import logging
 from functools import lru_cache
-
+import time                                                                 # with the other imports
+from langchain_core.messages import AIMessage, BaseMessage, ToolMessage     # add AIMessage
 from dotenv import load_dotenv
 from langchain.agents import create_agent
 from langchain_core.messages import BaseMessage, ToolMessage
 from pydantic import BaseModel, ValidationError
-
 from models import AttractionsSection, TravelPlan, TravelRequest, WeatherSection
 from tools import get_attractions, get_weather
 
@@ -31,6 +31,7 @@ def get_agent():
 
 def plan_trip(request: TravelRequest, agent=None) -> TravelPlan:
     agent = agent or get_agent()
+    started = time.perf_counter()
     result = agent.invoke({
         "messages": [{
             "role": "user",
@@ -41,6 +42,15 @@ def plan_trip(request: TravelRequest, agent=None) -> TravelPlan:
         }]
     })
     messages = result["messages"]
+    
+    model_calls = [m for m in messages if isinstance(m, AIMessage)]
+    logger.info(
+        "plan_trip city=%s took %.1fs: %d model calls, tools=%s",
+        request.city,
+        time.perf_counter() - started,
+        len(model_calls),
+        [tc["name"] for m in model_calls for tc in m.tool_calls],
+    )
     return TravelPlan(
         city=request.city,
         start_date=request.start_date,

@@ -26,3 +26,17 @@ npm run dev
 ```
 
 Open http://localhost:3000. API docs: http://localhost:8000/docs
+
+## Performance (local baseline)
+
+End-to-end request time measured with `curl` against the backend running locally on a MacBook Air: 3 cities × 3 runs, trip dates within the forecast window (Oct 2026).
+
+| Metric | Time |
+|---|---|
+| Median | 6.3 s |
+| Fastest | 4.4 s |
+| Slowest | 23.1 s |
+
+Each request makes 3 sequential Gemini calls (decide to fetch weather → decide to fetch attractions → write the plan) plus up to 3 HTTP calls (geocoding, forecast, Wikipedia), so model latency dominates. Latency varies widely between runs; the 23 s outlier is still being investigated.
+
+**Next:** stream progress so users see activity immediately, and measure the deployed app.
