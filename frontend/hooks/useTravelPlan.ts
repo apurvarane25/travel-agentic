@@ -6,9 +6,11 @@ export function useTravelPlan() {
   const [error, setError] = useState<ApiError | null>(null);
   const [loading, setLoading] = useState(false);
   const inFlight = useRef<AbortController | null>(null);
+  const lastRequest = useRef<TravelRequest | null>(null);
 
   async function getPlan(request: TravelRequest) {
     inFlight.current?.abort(); // a new search cancels the previous one
+    lastRequest.current = request;
     const controller = new AbortController();
     inFlight.current = controller;
 
@@ -25,5 +27,9 @@ export function useTravelPlan() {
     }
   }
 
-  return { plan, error, loading, getPlan };
+  function retry() {
+    if (lastRequest.current) void getPlan(lastRequest.current);
+  }
+
+  return { plan, error, loading, getPlan, retry };
 }
